@@ -57,3 +57,18 @@ test('clear deletes all localStorage content', function(assert){
   assert.equal(subject.getItem('foo'), undefined, "after clear foo is undefined");
   assert.equal(subject.getItem('bar'), undefined, "after clear baz is undefined");
 });
+
+test('fires an event when stored value changes', function(assert){
+  var called = 0;
+
+  var subject = this.subject({
+    callback: function(event) {
+      called++;
+    }
+  });
+
+  subject.setItem('foo', 'bar');
+  subject.setItem('foo', 'baz');
+
+  assert.equal(called, 2, "update was called twice");
+});

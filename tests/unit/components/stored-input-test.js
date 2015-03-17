@@ -62,5 +62,6 @@ test('input field sets localStorage on focus out', function(assert){
   });
   this.$().blur();
 
-  assert.equal(window.localStorage.getItem('foo'), `"baz"`);
+  assert.equal(window.localStorage.getItem('foo'), `"baz"`, "the value was updated on focus out");
 });
+
