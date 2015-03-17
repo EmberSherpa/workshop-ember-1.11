@@ -21,5 +21,13 @@ export default Ember.Service.extend(Ember.Evented, {
   callback: function(event) {
     // notify listeners of change
     this.trigger('change', event.key, event.newValue);
+  },
+  unknownProperty: function(key) {
+    return this.getItem(key);
+  },
+  setUnknownProperty: function(key, value) {
+    this.setItem(key, value);
+    this.notifyPropertyChange(key);
+    return value;
   }
 });

@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 import {
   moduleFor,
   test
@@ -71,4 +73,50 @@ test('fires an event when stored value changes', function(assert){
   subject.setItem('foo', 'baz');
 
   assert.equal(called, 2, "update was called twice");
+});
+
+test('calling get on service returns localStorage value', function(assert){
+  localStorage.setItem('foo', `"baz"`);
+
+  var subject = this.subject();
+  assert.equal(subject.get('foo'), 'baz', "value retrieved with get is bar");
+});
+
+test('use set to store value to localStorage', function(assert){
+  var subject = this.subject();
+  Ember.run(function(){
+    subject.set('foo-bar', 'baz');
+  });
+  assert.equal(subject.get('foo-bar'), 'baz', "value was set to baz");
+});
+
+test('key on storage can be observed', function(assert){
+  var called = 0;
+  var subject = this.subject();
+
+  Ember.addObserver(subject, 'foo-baz', function(){
+    called++;
+  });
+
+  Ember.run(function(){
+    subject.set('foo-baz', 'bar');
+    subject.set('foo-baz', 'woot');
+  });
+
+  assert.equal(subject.get('foo-baz'), 'woot', "last value is used");
+  assert.equal(called, 2, "observer was fired twice");
+});
+
+test('key on storage can be bound', function(assert){
+  var subject = this.subject();
+  var obj = Ember.Object.extend({
+    storage: subject,
+    foo: Ember.computed.alias('storage.foo')
+  }).create();
+
+  assert.equal(obj.get('foo'), undefined, "foo is undefined");
+  Ember.run(function(){
+    subject.set('foo', 'bar');
+  });
+  assert.equal(obj.get('foo'), 'bar', "bar retrieved from aliased property");
 });
