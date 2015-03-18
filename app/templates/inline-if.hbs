@@ -1,0 +1,9 @@
+<h3>Inline If helper</h3>
+
+<ul>
+    <li>Background Color: <span style="color: {{backgroundColor}}">{{backgroundColor}}</span></li>
+    <li>Is Dark: {{if isDark 'Yes' 'No'}}</li>
+    <li>Inverse Color: <span style="color: {{inverseColor}}">{{inverseColor}}</span></li>
+</ul>
+
+<button style="background-color: {{backgroundColor}}; color: {{if isDark 'white' inverseColor}};" {{action 'changeColor'}}>Change Color</button>
