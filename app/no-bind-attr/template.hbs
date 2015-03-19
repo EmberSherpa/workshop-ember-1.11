@@ -4,6 +4,12 @@
   {{input type="range" value=size min=50 max=200}}
 </div>
 
+<h4>With SVG</h4>
+
 <svg class="circle" height={{size}} width={{size}}>
     <circle cx="{{radius}}" cy="{{radius}}" r="{{radius}}" fill={{color}} />
 </svg>
+
+<h4>With Polymer</h4>
+
+<svg-pulsing-circle color="{{color}}"></svg-pulsing-circle>
