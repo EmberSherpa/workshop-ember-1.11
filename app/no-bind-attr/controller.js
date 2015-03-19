@@ -5,7 +5,12 @@ export default Ember.Controller.extend({
   color: randomColor(),
   radius: Ember.computed('size', function(){
     return this.get('size') / 4;
-  })
+  }),
+  actions: {
+    changeColor: function() {
+      this.set('color', randomColor());
+    }
+  }
 });
 
 /**

@@ -6,10 +6,10 @@
 
 <h4>With SVG</h4>
 
-<svg class="circle" height={{size}} width={{size}}>
+<svg class="circle" height={{size}} width={{size}} {{action 'changeColor'}}>
     <circle cx="{{radius}}" cy="{{radius}}" r="{{radius}}" fill={{color}} />
 </svg>
 
 <h4>With Polymer</h4>
 
-<svg-pulsing-circle color="{{color}}"></svg-pulsing-circle>
+<svg-pulsing-circle color="{{color}}" size={{size}} radius={{radius}} {{action 'changeColor'}}></svg-pulsing-circle>
