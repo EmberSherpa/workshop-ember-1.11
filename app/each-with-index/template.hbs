@@ -1,0 +1,14 @@
+<h3>Each with Index</h3>
+
+<div>
+    List: {{list}}
+</div>
+
+<ul>
+  {{#each model as |text index|}}
+    <li>{{text}} at {{index}}</li>
+  {{/each}}
+</ul>
+
+<button {{action 'shuffleModel'}}>Shuffle</button>
+

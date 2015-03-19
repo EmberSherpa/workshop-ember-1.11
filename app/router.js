@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('inject-services');
   this.route('inline-if');
   this.route('no-bind-attr');
+  this.route('each-with-index');
 });
 
 export default Router;
