@@ -11,6 +11,9 @@
     "ember-load-initializers": "ember-cli/ember-load-initializers#0.0.2",
     "ember-qunit": "0.2.9",
     "ember-qunit-notifications": "0.0.7",
-    "qunit": "~1.17.1"
+    "qunit": "~1.17.1",
+    "polymer": "Polymer/polymer#~0.5.4",
+    "core-elements": "Polymer/core-elements#~0.5.4",
+    "paper-elements": "Polymer/paper-elements#~0.5.4"
   }
 }
