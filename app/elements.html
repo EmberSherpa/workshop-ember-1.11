@@ -35,39 +35,3 @@
     });
   </script>
 </polymer-element>
-
-<polymer-element name="pulsing-circle" attributes="color duration startscale endscale">
-  <template>
-    <style>
-      .circle {
-        width:100px;
-        height:100px;
-        border-radius:100px;
-      }
-    </style>
-    <div class="circle" style="background-color:{{color}}; z-index:-1;">
-    </div>
-  </template>
-  <script>
-    Polymer({
-      color: 'blue',
-      duration: 1200,
-      ready: function() {
-        this.color = 'yellow';
-        var circle = this.shadowRoot.querySelector('.circle');
-        circle.animate([
-            {opacity: "1.0", transform: "scale(5)"},
-            {opacity: ".9", transform: "scale(10)"},
-            {opacity: ".8", transform: "scale(10)"},
-            {opacity: "0", transform: "scale(15)"}
-          ],
-          {
-            duration: this.duration,
-            easing: 'cubic-bezier(.22,.67,.52,.92)',
-            fill: 'forwards',
-            // iterations: Infinity
-          });
-      }
-    });
-  </script>
-</polymer-element>
