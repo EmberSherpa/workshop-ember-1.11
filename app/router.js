@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('services');
+  this.route('inject-services');
   this.route('inline-if');
   this.route('no-bind-attr');
 });
