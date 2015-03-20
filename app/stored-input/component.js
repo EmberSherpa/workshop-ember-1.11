@@ -1,10 +1,16 @@
+// BEGIN-SNIPPET stored-input-component
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  /**
+   * Inject local-storage on storage property
+   */
+  storage: Ember.inject.service('local-storage'),
+
+  // END-SNIPPET
   tagName: 'input',
   type: 'text',
   attributeBindings: ['value', 'type'],
-  storage: Ember.inject.service('local-storage'),
   /**
    * Key where value is stored
    */

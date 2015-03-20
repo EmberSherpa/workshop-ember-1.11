@@ -26,6 +26,7 @@ test('it renders', function (assert) {
   assert.equal(component._state, 'inDOM');
 });
 
+// BEGIN-SNIPPET access-service
 test('has storage', function (assert) {
   var component = this.subject();
 
@@ -39,6 +40,7 @@ test('has storage', function (assert) {
   // get returns instance of the service looked up in the container
   assert.ok(component.get('storage') instanceof LocalStorageService, "component.get returns instance of injected service");
 });
+// END-SNIPPET
 
 test('input field reads value from stored key', function(assert){
   window.localStorage.setItem('foo', `"bar"`);

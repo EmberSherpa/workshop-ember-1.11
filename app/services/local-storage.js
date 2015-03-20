@@ -1,5 +1,8 @@
 import Ember from 'ember';
 
+/**
+ * filepath: services/local-storage.js
+ */
 export default Ember.Service.extend(Ember.Evented, {
   init: function() {
     /**
