@@ -11,6 +11,10 @@ Router.map(function() {
   this.route('no-bind-attr');
   this.route('each-with-index');
   this.route('component-helper');
+  this.route('object-controller', function(){
+    this.route('old-school');
+    this.route('new-shiny');
+  });
 });
 
 export default Router;

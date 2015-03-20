@@ -1,5 +1,9 @@
 <h3>Component Helper</h3>
 
 {{#each model as |component|}}
-  {{component component.name tagName="h1"}}
+    <div class="row">
+      {{component component.name tagName="h1"}}
+
+      {{ember-selectize content=model optionValuePath="name" optionLabelPath="name" value=component.name}}
+    </div>
 {{/each}}
