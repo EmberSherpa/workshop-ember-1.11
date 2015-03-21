@@ -1,0 +1,13 @@
+& {
+  margin-bottom: 20px;
+}
+
+.options {
+  margin-top: 5px;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+.option:hover {
+  cursor: pointer;
+}

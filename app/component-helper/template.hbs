@@ -1,9 +1,21 @@
-<h3>Component Helper</h3>
+<h2>Component Helper</h2>
+
+<h3>Demo</h3>
 
 {{#each model as |component|}}
-    <div class="row">
-      {{component component.name tagName="h1"}}
-
-
-    </div>
+  {{#choose-option original=component.name options=options as |componentName|}}
+    {{component componentName original=component.name}}
+  {{/choose-option}}
 {{/each}}
+
+<h3>Use</h3>
+
+{{code-snippet name="component-helper.hbs"}}
+
+<h3>Pass parameters</h3>
+
+{{code-snippet name="component-helper-with-parameters.hbs"}}
+
+<h3>Block template</h3>
+
+{{code-snippet name="component-helper-block-template.hbs"}}

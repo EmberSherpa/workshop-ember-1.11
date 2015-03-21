@@ -1,0 +1,8 @@
+{{yield current}}
+<div class="options">
+    Change:
+  {{#each options as |option|}}
+    <span class="option" {{action 'setCurrent' option}}>{{option}}</span>,
+  {{/each}}
+    <span class="option" {{action 'setCurrent' original}}>reset</span>
+</div>

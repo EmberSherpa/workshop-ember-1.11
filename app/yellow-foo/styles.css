@@ -1,4 +1,12 @@
 & {
-  display: inline-block;
   color: yellow;
+  display: inline-block;
+}
+
+.block {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 20px;
+  background: grey;
 }

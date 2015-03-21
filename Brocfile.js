@@ -21,8 +21,6 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-app.import('vendor/styles.css');
-
 var polymerVulcanize = vulcanize('app', {
   input: 'elements.html',
   output: 'assets/vulcanized.html',
