@@ -1,15 +1,36 @@
-<h3>No Bind Attr</h3>
+<h2>No Bind Attr</h2>
 
 <div>
   {{input type="range" value=size min=50 max=200}}
 </div>
 
-<h4>With SVG</h4>
+<h3>With Style</h3>
 
-<svg class="circle" height={{size}} width={{size}} {{action 'changeColor'}}>
+{{code-snippet name="no-bind-attr-style.hbs"}}
+
+<div class="css-circle" {{action 'changeColor'}}></div>
+
+<style type="text/css">
+    .css-circle {
+        border-radius: 50%;
+        height: {{half}}px;
+        width: {{half}}px;
+        background-color: {{color}};
+    }
+</style>
+
+<h3>With SVG</h3>
+
+{{code-snippet name="no-bind-attr-svg.hbs"}}
+
+<svg class="circle" height={{half}} width={{half}} {{action 'changeColor'}}>
     <circle cx="{{radius}}" cy="{{radius}}" r="{{radius}}" fill={{color}} />
 </svg>
 
-<h4>With Polymer</h4>
+<h3>With Polymer</h3>
 
-<svg-pulsing-circle color="{{color}}" size={{size}} radius={{radius}} {{action 'changeColor'}}></svg-pulsing-circle>
+{{code-snippet name="no-bind-attr-polymer.hbs"}}
+
+<svg-pulsing-circle color="{{color}}" size={{half}} radius={{radius}} {{action 'changeColor'}}></svg-pulsing-circle>
+
+{{code-snippet name="polymer.html"}}

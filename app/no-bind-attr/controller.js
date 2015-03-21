@@ -6,6 +6,9 @@ export default Ember.Controller.extend({
   radius: Ember.computed('size', function(){
     return this.get('size') / 4;
   }),
+  half: Ember.computed('size', function(){
+    return this.get('size') / 2;
+  }),
   actions: {
     changeColor: function() {
       this.set('color', randomColor());

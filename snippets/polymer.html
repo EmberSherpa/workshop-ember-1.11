@@ -1,0 +1,36 @@
+<polymer-element name="svg-pulsing-circle" attributes="color size radius duration startscale endscale">
+  <template>
+    <style>
+      .circle {
+        width:100px;
+        height:100px;
+      }
+    </style>
+    <svg class="circle" height={{size}} width={{size}}>
+      <circle cx="{{radius}}" cy="{{radius}}" r="{{radius}}" fill={{color}} />
+    </svg>
+  </template>
+  <script>
+    Polymer({
+      color: 'blue',
+      duration: 2200,
+      size: 100,
+      radius: 25,
+      ready: function() {
+        this.color = 'yellow';
+        var circle = this.shadowRoot.querySelector('.circle');
+        circle.animate([
+            {opacity: "1.0"},
+            {opacity: "0"},
+            {opacity: "1.0"}
+          ],
+          {
+            duration: this.duration,
+            easing: 'cubic-bezier(.22,.67,.52,.92)',
+            fill: 'forwards',
+            iterations: Infinity
+          });
+      }
+    });
+  </script>
+</polymer-element>
