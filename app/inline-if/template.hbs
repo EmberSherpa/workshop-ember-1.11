@@ -1,4 +1,6 @@
-<h3>Inline If helper</h3>
+<h2>Inline If helper</h2>
+
+<h3>Demo</h3>
 
 <ul>
     <li>Background Color: <span style="color: {{backgroundColor}}">{{backgroundColor}}</span></li>
@@ -7,3 +9,11 @@
 </ul>
 
 <button style="background-color: {{backgroundColor}}; color: {{if isDark 'white' inverseColor}};" {{action 'changeColor'}}>Change Color</button>
+
+<h3>Easy to use</h3>
+
+{{code-snippet name="inline-if-strings.hbs"}}
+
+{{code-snippet name="inline-if-property.hbs"}}
+
+<strong>*</strong> <small>same rules apply as with inline styles</small>
