@@ -8,6 +8,8 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
+app.import('vendor/styles.css');
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //

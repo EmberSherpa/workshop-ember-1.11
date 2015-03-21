@@ -1,0 +1,5 @@
+{{#each model as |component|}}
+  {{#choose-option original=component.name options=options as |componentName|}}
+    {{component componentName original=component.name}}
+  {{/choose-option}}
+{{/each}}

@@ -1,21 +1,34 @@
 <h2>Component Helper</h2>
 
-<h3>Demo</h3>
+<section>
+  <h3>Demo</h3>
 
-{{#each model as |component|}}
-  {{#choose-option original=component.name options=options as |componentName|}}
-    {{component componentName original=component.name}}
-  {{/choose-option}}
-{{/each}}
+  {{code-snippet name="component-helper-route.js"}}
+  {{code-snippet name="component-helper-demo.hbs"}}
 
-<h3>Use</h3>
+  {{#each model as |component|}}
+    {{#choose-option original=component.name options=options as |componentName|}}
+      {{component componentName original=component.name}}
+    {{/choose-option}}
+  {{/each}}
 
-{{code-snippet name="component-helper.hbs"}}
+</section>
 
-<h3>Pass parameters</h3>
+<section>
+  <h3>Use</h3>
 
-{{code-snippet name="component-helper-with-parameters.hbs"}}
+  {{code-snippet name="component-helper.hbs"}}
+</section>
 
-<h3>Block template</h3>
 
-{{code-snippet name="component-helper-block-template.hbs"}}
+<section>
+  <h3>Pass parameters</h3>
+
+  {{code-snippet name="component-helper-with-parameters.hbs"}}
+</section>
+
+<section>
+  <h3>Block template</h3>
+
+  {{code-snippet name="component-helper-block-template.hbs"}}
+</section>

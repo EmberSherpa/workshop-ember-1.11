@@ -1,0 +1,19 @@
+body {
+  margin-top:0px;
+  padding-bottom:30px;
+  background-color: white;
+  font-family: RobotoDraft;
+}
+
+.content {
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+section {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}

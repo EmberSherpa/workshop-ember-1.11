@@ -1,3 +1,21 @@
-<h1 id="title">What's New in Ember 1.11?</h1>
-
-{{outlet}}
+<core-scaffold>
+    <core-header-panel navigation flex mode="seamed">
+        <core-toolbar>EmberSherpa</core-toolbar>
+        <core-menu selected="0">
+            <core-submenu label="Features">
+              <core-item>{{#link-to "inject-services"}}Services{{/link-to}}</core-item>
+              <core-item>{{#link-to "inline-if"}}Inline if helper{{/link-to}}</core-item>
+              <core-item>{{#link-to "no-bind-attr"}}No Bind Attr{{/link-to}}</core-item>
+              <core-item>{{#link-to "each-with-index"}}Each With Index{{/link-to}}</core-item>
+              <core-item>{{#link-to "component-helper"}}Component Helper{{/link-to}}</core-item>
+            </core-submenu>
+            <core-submenu label="Deprecations">
+                <core-item>{{#link-to "object-controller"}}ObjectController{{/link-to}}</core-item>
+            </core-submenu>
+        </core-menu>
+    </core-header-panel>
+    <div tool>What's new in Ember 1.11?</div>
+    <div class="content">
+      {{outlet}}
+    </div>
+</core-scaffold>

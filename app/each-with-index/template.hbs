@@ -1,19 +1,23 @@
 <h2>Each with Index</h2>
 
-<h3>Demo</h3>
+<section>
+    <h3>Demo</h3>
 
-<div>
-    List: {{list}}
-</div>
+    <div>
+        List: {{list}}
+    </div>
 
-<ul>
-  {{#each model as |text index|}}
-    <li>{{text}} at {{index}}</li>
-  {{/each}}
-</ul>
+    <ul>
+      {{#each model as |text index|}}
+          <li>{{text}} at {{index}}</li>
+      {{/each}}
+    </ul>
 
-<button {{action 'shuffleModel'}}>Shuffle</button>
+    <button {{action 'shuffleModel'}}>Shuffle</button>
+</section>
 
-<h3>Use</h3>
+<section>
+  <h3>Use</h3>
 
-{{code-snippet name="each-with-index.hbs"}}
+  {{code-snippet name="each-with-index.hbs"}}
+</section>
